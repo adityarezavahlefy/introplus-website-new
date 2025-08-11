@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1ac8db; /* cyan-400 - Brand authority + trust building */
+  --color-secondary: #000000; /* black - Professional credibility + text hierarchy */
+  --color-accent: #6ce5e8; /* cyan-300 - CTA power + conversion moments */
+  
+  /* Background Colors */
+  --color-background: #ffffff; /* white - Clean canvas for content scanning */
+  --color-surface: #f8fafc; /* slate-50 - Subtle section separation */
+  
+  /* Text Colors */
+  --color-text-primary: #1f2937; /* gray-800 - Maximum readability contrast */
+  --color-text-secondary: #6b7280; /* gray-500 - Supporting information hierarchy */
+  
+  /* Status Colors */
+  --color-success: #10b981; /* emerald-500 - Revenue numbers + positive metrics */
+  --color-warning: #f59e0b; /* amber-500 - Urgency elements only */
+  --color-error: #ef4444; /* red-500 - Form validation feedback */
+  
+  /* Border Colors */
+  --color-border: #e5e7eb; /* gray-200 - Form fields and section separators */
+  
+  /* Shadow Colors */
+  --shadow-default: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-montserrat font-bold px-6 py-3 rounded-lg transition-all duration-250 ease-in-out;
+    box-shadow: var(--shadow-default);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-accent transform scale-105;
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-default);
+  }
+  
+  .border-default {
+    border: 1px solid var(--color-border);
+  }
+  
+  .animate-smooth {
+    transition: all 250ms ease-in-out;
+  }
+  
+  .animate-graphics {
+    transition: all 300ms ease-in-out;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+}
